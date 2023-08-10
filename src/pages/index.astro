@@ -4,12 +4,29 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to my site">
-  <main class="flex items-center">
+  <main class="flex flex-col items-center justify-center">
     <div class="container intro whitespace-nowrap">
-      <h class="mt-4 outfit text-2xl md:text-5xl lg:text-7xl"
-        >Hi 👋 my name is <span class="text-gradient">Hunter</span></h
+      <h class="mt-4 outfit text-2xl md:text-5xl lg:text-3xl"
+        >Hi my name is <span class="text-gradient">Hunter</span></h
       >
     </div>
+    <div class="container byline">
+      <h class="mt-4 outfit text-2xl md:text-5xl lg:text-7xl">I am a UI / UX</h>
+      <p class="mt-4 outfit text-2xl md:text-5xl lg:text-7xl text-gradient">
+        Designer <span>&</span><span
+          class="mt-4 outfit text-2xl md:text-5xl lg:text-7xl text-gradient"
+        >
+          Engineer
+        </span>
+      </p>
+    </div>
+
+    <!-- 
+    <Card
+      href="https://docs.astro.build/"
+      title="Documentation"
+      body="Learn how Astro works and explore the official API docs."
+    /> -->
 
     <!-- <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br

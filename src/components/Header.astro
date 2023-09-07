@@ -1,0 +1,137 @@
+---
+// interface Props {
+//   title: string;
+//   body: string;
+//   href: string;
+// }
+
+// const { href, title, body } = Astro.props;
+---
+
+<header class="primary-header">
+  <div class="logo-container">
+    <span class="logo">Van Lear</span>
+  </div>
+
+  <button
+    class="nav-toggle"
+    aria-controls="primary-navigation"
+    aria-expanded="false"
+  >
+    <svg
+      stroke="var(--btn-color)"
+      fill="none"
+      class="hamburger"
+      viewBox="-10 -10 120 120"
+      width="50"
+    >
+      <path
+        class="line"
+        stroke-width="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+      ></path>
+    </svg>
+  </button>
+  <nav>
+    <ul id="primary-nav" data-visible="false" class="primary-nav flex">
+      <li class="active">
+        <a href="/home"> <span aria-hidden="true">00</span> Home</a>
+      </li>
+      <li>
+        <a href="/home"> <span aria-hidden="true">00</span> Work</a>
+      </li>
+      <li>
+        <a href="/home"> <span aria-hidden="true">00</span> About</a>
+      </li>
+      <li>
+        <a href="/home"> <span aria-hidden="true">00</span> Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  import "../scripts/menu.js";
+</script>
+
+<style>
+  li {
+    color: white;
+  }
+
+  .primary-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    margin: 2rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+  }
+
+  .flex {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .primary-nav[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .primary-nav {
+    list-style: none;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    inset: 0 0 0 20%;
+    background: hsla(0, 0%, 3%, 0.75);
+    backdrop-filter: blur(0.5rem);
+    flex-direction: column;
+    padding: min(20vh, 10rem) 2em;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .nav-toggle {
+    --btn-color: white;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+  }
+
+  .nav-toggle .hamburger {
+    transition: translate 1s, rotate 1s;
+  }
+
+  .nav-toggle[aria-expanded="true"] .hamburger {
+    translate: 5px -5px;
+    rotate: 0.125turn;
+  }
+
+  .nav-toggle .line {
+    transition: 1s;
+    stroke-dasharray: 60 31 60 300;
+  }
+
+  .nav-toggle[aria-expanded="true"] .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+  }
+
+  .nav-toggle {
+  }
+</style>

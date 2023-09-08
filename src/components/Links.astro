@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="inner-cont">
+    <ul class="links-list flex flex-row justify-between">
+      <li class="link text-2xl md:text-5xl lg:text-7xl"><a href="">Work</a></li>
+      <li class="link text-2xl md:text-5xl lg:text-7xl">
+        <a href="">About</a>
+      </li>
+      <li class="link text-2xl md:text-5xl lg:text-7xl">
+        <a href="">Contact</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .links-list .link {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  .link {
+    text-decoration: none;
+    position: relative;
+  }
+
+  .link::before {
+    content: "";
+    background-color: #5c02ff;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 8px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .link:hover::before {
+    bottom: 0;
+    height: 100%;
+  }
+</style>

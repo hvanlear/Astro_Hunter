@@ -10,7 +10,7 @@
 
 <header class="primary-header">
   <div class="logo-container">
-    <span class="logo">Van Lear</span>
+    <span class="logo"><a href="/">Van Lear</a></span>
   </div>
 
   <button
@@ -36,16 +36,16 @@
   </button>
   <nav>
     <ul id="primary-nav" data-visible="false" class="primary-nav flex">
-      <li class="active">
-        <a href="/home"> <span aria-hidden="true">00</span> Home</a>
+      <li class="nav-link" class="active">
+        <a href="/"> <span aria-hidden="true">00</span> Home</a>
       </li>
-      <li>
+      <li class="nav-link">
         <a href="/home"> <span aria-hidden="true">00</span> Work</a>
       </li>
-      <li>
+      <li class="nav-link">
         <a href="/home"> <span aria-hidden="true">00</span> About</a>
       </li>
-      <li>
+      <li class="nav-link">
         <a href="/home"> <span aria-hidden="true">00</span> Contact</a>
       </li>
     </ul>
@@ -59,6 +59,15 @@
 <style>
   li {
     color: white;
+  }
+
+  .nav-link {
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    background: linear-gradient(transparent 50%, #5c02ff 50%);
   }
 
   .primary-header {
@@ -87,7 +96,7 @@
     padding: 0;
     margin: 0;
     position: fixed;
-    inset: 0 0 0 20%;
+    inset: 0 0 0 0%;
     background: hsla(0, 0%, 3%, 0.75);
     backdrop-filter: blur(0.5rem);
     flex-direction: column;
@@ -113,6 +122,7 @@
   }
 
   .nav-toggle[aria-expanded="true"] .hamburger {
+    --btn-color: #5c02ff;
     translate: 5px -5px;
     rotate: 0.125turn;
   }

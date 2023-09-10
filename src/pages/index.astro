@@ -4,9 +4,10 @@ import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import SmHeadline from "../components/SmHeadline.astro";
 import Links from "../components/Links.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to my site">
+<Layout title="Hunter Van Lear">
   <Header />
   <main class="container flex flex-col items-center">
     <section class="container hero-section">
@@ -45,10 +46,14 @@ import Links from "../components/Links.astro";
       <Links />
     </section>
   </main>
+  <footer>
+    <Footer />
+  </footer>
 </Layout>
 
 <style>
   main {
+    height: 100vh;
     margin: auto;
     padding: 1rem;
     /* width: 900px; */
@@ -57,6 +62,12 @@ import Links from "../components/Links.astro";
     color: white;
     font-size: 20px;
     line-height: 1.6;
+  }
+
+  footer {
+    width: 100%;
+    /* background-color: #2e323b; */
+    background-color: #0f1116;
   }
 
   #links-section {
@@ -94,13 +105,7 @@ import Links from "../components/Links.astro";
     text-align: center;
     margin-bottom: 1em;
   }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
+
   .instructions {
     margin-bottom: 2rem;
     border: 1px solid rgba(var(--accent-light), 25%);

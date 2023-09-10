@@ -1,19 +1,68 @@
-<section>
-  <div class="footer-container flex">
-    <div class="container footer-contianer-top">TOP</div>
-    <div class="container footer-contianer-bottom">BOTTOM</div>
+<section class="footer-content py-8">
+  <div class="flex-row items-center">
+    <div
+      class="items-center container footer-contianer-top flex justify-between"
+    >
+      <div class="column"><span class="logo-lg">Hunter Van Lear</span></div>
+      <div class="column">
+        <ul class="footer-links flex flex-row">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">Work</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="items-center container footer-contianer-bottom flex justify-between py-8"
+    >
+      <div class="flex">
+        <div class="location-details">
+          <div class="column cords">35.787743°N, -78.644257°W</div>
+          <div class="column">Raleigh, NC</div>
+          <div class="column">
+            <span class="greetings"></span><span class="timeEmoji"></span>
+          </div>
+        </div>
+      </div>
+      <div class="column"></div>
+      <div class="column email-container">
+        <div><span class="email-greeting">Say Hello</span></div>
+        <div><span class="email">hvanlear@gmail.com</span></div>
+      </div>
+      <div class="column">Column</div>
+    </div>
   </div>
-</section>
 
-<style>
-  .footer-container {
-    margin: auto;
-    padding: 1rem;
-    /* width: 900px; */
-    min-height: 10rem;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-</style>
+  <script>
+    import "../scripts/greetings.js";
+  </script>
+
+  <style>
+    .footer-content {
+      width: 100%;
+      font-size: 1.2rem;
+      font-family: "Sohne-Halbfett";
+    }
+
+    .location-details {
+      font-family: "Sohne-leicht";
+    }
+
+    .logo-lg {
+      font-size: 3rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    .email-greeting {
+      font-size: 1.8rem;
+    }
+  </style>
+</section>

@@ -47,17 +47,21 @@ import Footer from "../components/Footer.astro";
     </section>
   </main>
   <footer>
-    <Footer />
+    <div class="footer-container container flex">
+      <Footer />
+    </div>
   </footer>
 </Layout>
 
 <style>
   main {
-    height: 100vh;
+    min-height: 100vh;
+  }
+
+  main,
+  .footer-container {
     margin: auto;
     padding: 1rem;
-    /* width: 900px; */
-    min-height: 30rem;
     max-width: calc(100% - 2rem);
     color: white;
     font-size: 20px;
@@ -74,15 +78,8 @@ import Footer from "../components/Footer.astro";
     width: 100%;
   }
 
-  .hero {
-    width: min(100% - 2rem, 60rem);
-    height: 80vh;
-    margin-inline: auto;
-    border-bottom: 1px solid white;
-  }
-
   .hero-text {
-    font-weight: 300;
+    font-family: "Sohne-Leicht";
   }
 
   .byline {

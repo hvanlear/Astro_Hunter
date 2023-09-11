@@ -25,6 +25,7 @@ const { title } = Astro.props;
     --accent: 195, 55, 100;
     --accent-light: 224, 204, 250;
     --accent-dark: 29, 38, 113;
+    --blurple: #5c02ff;
     --accent-gradient: linear-gradient(
       45deg,
       rgb(var(--accent)),
@@ -32,14 +33,15 @@ const { title } = Astro.props;
       rgb(68, 74, 96) 100%
     );
 
-    /* --text-gradient: {
+    --text-gradient: {
       background-image: var(--accent-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-size: 400%;
       background-position: 0%;
-    } */
+    }
   }
+
   @font-face {
     font-family: "Sohne-Leicht";
     src: url("/fonts/Sohne-Leicht.otf") format("otf");
@@ -63,6 +65,8 @@ const { title } = Astro.props;
 
   body {
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   button {

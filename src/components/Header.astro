@@ -34,22 +34,26 @@
       ></path>
     </svg>
   </button>
-  <nav>
-    <ul id="primary-nav" data-visible="false" class="primary-nav flex">
-      <li class="nav-link" class="active">
-        <a href="/"> <span aria-hidden="true">00</span> Home</a>
-      </li>
-      <li class="nav-link">
-        <a href="/home"> <span aria-hidden="true">00</span> Work</a>
-      </li>
-      <li class="nav-link">
-        <a href="/home"> <span aria-hidden="true">00</span> About</a>
-      </li>
-      <li class="nav-link">
-        <a href="/home"> <span aria-hidden="true">00</span> Contact</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="container">
+    <div class="container container-nav">
+      <nav>
+        <ul id="primary-nav" data-visible="false" class="primary-nav flex">
+          <li class="nav-link" class="active">
+            <a href="/"> <span aria-hidden="true">00</span> Home</a>
+          </li>
+          <li class="nav-link">
+            <a href="/home"> <span aria-hidden="true">00</span> Work</a>
+          </li>
+          <li class="nav-link">
+            <a href="/home"> <span aria-hidden="true">00</span> About</a>
+          </li>
+          <li class="nav-link">
+            <a href="/home"> <span aria-hidden="true">00</span> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
 
 <script>
@@ -66,7 +70,7 @@
   }
 
   li {
-    color: white;
+    color: var(--primary-bg);
   }
 
   .nav-link {
@@ -104,14 +108,14 @@
     padding: 0;
     margin: 0;
     position: fixed;
-    inset: 0 0 0 0%;
-    background: hsla(0, 0%, 3%, 0.75);
+    inset: 0 0 0 0;
+    background: #d5d2ce;
     backdrop-filter: blur(0.5rem);
     flex-direction: column;
     padding: min(20vh, 10rem) 2em;
 
     transform: translateX(100%);
-    transition: transform 350ms ease-out;
+    transition: transform 350ms ease-in-out;
   }
 
   .nav-toggle {
@@ -130,7 +134,7 @@
   }
 
   .nav-toggle[aria-expanded="true"] .hamburger {
-    --btn-color: #5c02ff;
+    --btn-color: var(--primary-bg);
     translate: 5px -5px;
     rotate: 0.125turn;
   }

@@ -34,28 +34,53 @@
       ></path>
     </svg>
   </button>
-  <div class="primary-nav flex justify-between">
+  <div class="primary-nav flex justify-between" data-visible="false">
     <div class="container container-nav">
       <nav class="">
         <ul data-visible="false" class="flex flex-col">
-          <li class="nav-link" class="active">
-            <a href="/"> <span aria-hidden="true"></span> Home</a>
+          <li class="active">
+            <a class="nav-link" href="/">
+              <span aria-hidden="true"></span> Home</a
+            >
           </li>
-          <li class="nav-link">
-            <a href="/home"> <span aria-hidden="true"></span> Work</a>
+          <li>
+            <a class="nav-link" href="/work">
+              <span aria-hidden="true"></span> Work</a
+            >
           </li>
-          <li class="nav-link">
-            <a href="/home"> <span aria-hidden="true"></span> About</a>
+          <li>
+            <a class="nav-link" href="/home">
+              <span aria-hidden="true"></span> About</a
+            >
           </li>
-          <li class="nav-link">
-            <a href="/home"> <span aria-hidden="true"></span> Contact</a>
+          <li>
+            <a class="nav-link" href="/home">
+              <span aria-hidden="true"></span> Contact</a
+            >
           </li>
         </ul>
       </nav>
     </div>
     <div class="container-copyright flex flex-col gap-1">
-      <span class="copy-text">© Copyright 2011 - 2023</span>
-      <span class="copy-text">Made with Astro and Coffee</span>
+      <span class="copy-text flex gap-1 flex-row"
+        >Made with <span class="copy-svg"
+          ><svg
+            width="16"
+            height="32"
+            viewBox="0 0 63 79"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.4924 65.9282C15.6165 62.432 14.4851 55.0859 16.0999 49.7638C18.8998 53.1193 22.7793 54.1822 26.7977 54.7822C33.0013 55.7081 39.0937 55.3618 44.8565 52.5637C45.5158 52.2434 46.125 51.8174 46.8454 51.386C47.3861 52.9341 47.5268 54.497 47.338 56.0877C46.8787 59.9617 44.9251 62.9542 41.8177 65.2227C40.5752 66.13 39.2604 66.9411 37.9771 67.7967C34.0346 70.4262 32.9679 73.5095 34.4494 77.9946C34.4846 78.1038 34.5161 78.2131 34.5957 78.4797C32.5828 77.5909 31.1124 76.2965 29.9921 74.5946C28.8088 72.7984 28.2458 70.8114 28.2162 68.6615C28.2014 67.6152 28.2014 66.5597 28.0588 65.5282C27.7107 63.0135 26.5144 61.8876 24.2608 61.8227C21.9479 61.7561 20.1183 63.1672 19.6331 65.3893C19.5961 65.5597 19.5424 65.7282 19.4887 65.9263L19.4924 65.9282Z"
+              fill="#17191E"></path>
+            <path
+              d="M0 51.3932C0 51.3932 10.5979 46.2433 21.2254 46.2433L29.2382 21.5069C29.5381 20.3106 30.4141 19.4977 31.4029 19.4977C32.3918 19.4977 33.2677 20.3106 33.5677 21.5069L41.5804 46.2433C54.1672 46.2433 62.8058 51.3932 62.8058 51.3932C62.8058 51.3932 44.8044 2.47586 44.7692 2.37772C44.2526 0.931458 43.3804 0 42.2045 0H20.6032C19.4273 0 18.5903 0.931458 18.0384 2.37772C17.9995 2.47401 0 51.3932 0 51.3932Z"
+              fill="#17191E"></path>
+          </svg></span
+        >and Coffee</span
+      >
+      <span class="copy-text">© Copyright 2019 - 2023</span>
     </div>
   </div>
 </header>
@@ -65,14 +90,6 @@
 </script>
 
 <style>
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-
   li {
     color: var(--primary-bg);
   }
@@ -80,11 +97,11 @@
   .nav-link {
     font-family: "Cormorant Garamond", serif;
     font-size: 4rem;
-    transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .nav-link:hover {
-    background: linear-gradient(transparent 50%, #5c02ff 50%);
+    background: linear-gradient(transparent 60%, #5c02ff 60%);
   }
 
   .primary-header {
@@ -118,7 +135,7 @@
     background: #d5d2ce;
     backdrop-filter: blur(0.5rem);
     flex-direction: column;
-    padding: min(20vh, 10rem) 2em;
+    padding: min(20vh, 10rem) 4rem min(5vh, 5rem) 4rem;
     transform: translateX(100%);
     transition: transform 350ms ease-in-out;
   }
@@ -154,6 +171,7 @@
     stroke-dashoffset: -90;
   }
 
-  .nav-toggle {
+  .copy-text {
+    font-size: 0.8rem;
   }
 </style>

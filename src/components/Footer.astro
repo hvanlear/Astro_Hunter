@@ -28,9 +28,18 @@ import FooterIcons from "../components/Footer-Icons.astro";
     >
       <div class="flex">
         <div class="location-details">
-          <div class="column cords">35.787743°N, -78.644257°W</div>
-          <div class="column">Raleigh, NC</div>
-          <div class="column">
+          <!-- <div class="column text-serif-2">residing in</div> -->
+          <div>
+            <span class="text-light"
+              >35.787743° <span class="text-serif-2">N</span>, -78.644257° <span
+                class="text-serif-2">W</span
+              ></span
+            >
+          </div>
+          <div>
+            <span class="text-light">Raleigh, NC</span>
+          </div>
+          <div>
             <span class="greetings"></span><span class="timeEmoji"></span>
           </div>
         </div>
@@ -94,6 +103,10 @@ import FooterIcons from "../components/Footer-Icons.astro";
 
   .location-details {
     font-family: "Sohne-leicht";
+  }
+
+  .location-details > .text-serif-2 {
+    font-size: 1.8rem;
   }
 
   .link-footer {

@@ -34,28 +34,28 @@
       ></path>
     </svg>
   </button>
-  <div class="primary-nav">
+  <div class="primary-nav flex justify-between">
     <div class="container container-nav">
-      <nav>
-        <ul data-visible="false" class="flex">
+      <nav class="">
+        <ul data-visible="false" class="flex flex-col">
           <li class="nav-link" class="active">
-            <a href="/"> <span aria-hidden="true">00</span> Home</a>
+            <a href="/"> <span aria-hidden="true"></span> Home</a>
           </li>
           <li class="nav-link">
-            <a href="/home"> <span aria-hidden="true">00</span> Work</a>
+            <a href="/home"> <span aria-hidden="true"></span> Work</a>
           </li>
           <li class="nav-link">
-            <a href="/home"> <span aria-hidden="true">00</span> About</a>
+            <a href="/home"> <span aria-hidden="true"></span> About</a>
           </li>
           <li class="nav-link">
-            <a href="/home"> <span aria-hidden="true">00</span> Contact</a>
+            <a href="/home"> <span aria-hidden="true"></span> Contact</a>
           </li>
         </ul>
       </nav>
     </div>
     <div class="container-copyright flex flex-col gap-1">
       <span class="copy-text">© Copyright 2011 - 2023</span>
-      <span class="copy-text">Made with Astro</span>
+      <span class="copy-text">Made with Astro and Coffee</span>
     </div>
   </div>
 </header>
@@ -78,6 +78,8 @@
   }
 
   .nav-link {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 4rem;
     transition: background 0.3s ease-in-out;
   }
 
@@ -117,7 +119,6 @@
     backdrop-filter: blur(0.5rem);
     flex-direction: column;
     padding: min(20vh, 10rem) 2em;
-
     transform: translateX(100%);
     transition: transform 350ms ease-in-out;
   }
@@ -126,7 +127,7 @@
     --btn-color: #d5d2ce;
     overflow: hidden;
     display: block;
-    position: absolute;
+    position: fixed;
     aspect-ratio: 1;
     top: 2rem;
     right: 2rem;

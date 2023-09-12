@@ -34,10 +34,10 @@
       ></path>
     </svg>
   </button>
-  <div class="container">
+  <div class="primary-nav">
     <div class="container container-nav">
       <nav>
-        <ul id="primary-nav" data-visible="false" class="primary-nav flex">
+        <ul data-visible="false" class="flex">
           <li class="nav-link" class="active">
             <a href="/"> <span aria-hidden="true">00</span> Home</a>
           </li>
@@ -52,6 +52,10 @@
           </li>
         </ul>
       </nav>
+    </div>
+    <div class="container-copyright flex flex-col gap-1">
+      <span class="copy-text">© Copyright 2011 - 2023</span>
+      <span class="copy-text">Made with Astro</span>
     </div>
   </div>
 </header>
@@ -119,7 +123,7 @@
   }
 
   .nav-toggle {
-    --btn-color: white;
+    --btn-color: #d5d2ce;
     overflow: hidden;
     display: block;
     position: absolute;

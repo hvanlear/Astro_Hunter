@@ -22,10 +22,18 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="">
+  <body class="" data-barba="wrapper">
     <slot />
+    <!-- Barba Core -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <!-- GSAP for animation -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"
+    ></script>
   </body>
 </html>
+
 <style is:global>
   @font-face {
     font-family: "Sohne-Extraleicht";
